@@ -1,0 +1,11 @@
+.body{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    background-image: url(/foodhome.jpg);
+    width: auto;
+    height: 100%;
+    margin-top: 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

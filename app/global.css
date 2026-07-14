@@ -1,6 +1,6 @@
 @media (prefers-color-scheme: dark) {
   html {
-    background-image: url(../public/foodhome.jpg);
+    background-color: pink;
     background-repeat: no-repeat;
     background-size: cover;
   }

@@ -1,58 +1,6 @@
 
 
 
-
-
-
-body {
-   color: white;
-   font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-
- 
-}
-
-
-
-
-
-
-@media (prefers-color-scheme: dark) {
-  html {
-    background-image: url(../public/foodhome.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   a.primary:hover {
     background: var(--button-primary-hover);
@@ -80,3 +28,10 @@ body {
     letter-spacing: -1.92px;
   }
 }
+
+
+.upper {
+  opacity: 20px;
+}
+
+
