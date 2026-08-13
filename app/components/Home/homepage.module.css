@@ -1,11 +1,52 @@
-.body{
-    color: white;
-    font-size: 30px;
-    text-align: center;
-    background-image: url(/foodhome.jpg);
-    width: auto;
-    height: 100%;
-    margin-top: 0%;
-    background-repeat: no-repeat;
-    background-size: cover;
+.body h1{
+ font-size: 60px;
+ color: #2b0264;
+    
+
+}
+
+
+.passage{
+ font-size: 3rem;
+      margin-left: 40px;
+      margin-top: 0;
+}
+
+.passage2{
+     font-size: 1.5rem;
+     margin-left: 10px;
+     color:#7A5468;
+}
+
+.image{
+  
+    padding: 30px;
+}
+
+.heading{
+    color: #D6365E;
+}
+
+.passage1 {
+    color: #D6365E;
+}
+
+.entirebody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    margin-left: 200px;
+    margin-top: 8rem;
+}
+
+
+
+.butt{
+    display: flex;
+    gap: 30px;
+    margin-left: 35rem;
+    
+    height: 5vh;
+    font-size: 13px;
 }

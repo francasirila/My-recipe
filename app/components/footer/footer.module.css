@@ -1,0 +1,157 @@
+.heading{
+text-align: center;
+font-size: 30px;
+background-color: #13325d;
+color: white;
+width: auto;
+height: 100%;
+
+}
+
+
+.form1{
+padding: 20px;
+font-size: 25px;
+display: flex;
+gap: 30px;
+}
+
+.form1 input{
+  width: 15vw;
+    height: 30px;
+    background-color: #13325d;
+    opacity: 95%;
+    color: white;
+        border-radius: 10px;
+
+}
+
+.form2{
+    padding: 20px;
+    font-size: 25px;
+}
+
+
+.form2 input{
+    width:37vw;
+    height: 30px;
+    background-color: #13325d;
+    opacity: 95%;
+    color: white;
+        border-radius: 10px;
+
+}
+
+
+
+.form3{
+    padding: 20px;
+    font-size: 25px;
+    display: flex;
+gap:300px;
+
+}
+
+
+.form3 input{
+    width: 35vw;
+    height: 150px;
+    background-color: #13325d;
+    opacity: 95%;
+    color: white;
+        border-radius: 10px;
+
+}
+
+
+.subscribe{
+    text-align: center;
+    width: 20vw;
+    height: 25vh;
+    margin-top: 0;
+    font-size: 25px;
+    background-color: #13325d;
+    color: white;
+    border-radius: 30px;
+
+
+}
+
+.subscribe input{
+    width: 10vw;
+    height: 30px;
+    background-color: white;
+    opacity: 95%;
+    color: white;
+}
+
+
+.subscribe p{
+    font-size: 15px;
+
+}
+
+
+.columns{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 30px;
+    color: white;
+    width: 100vw;
+    text-align: center;
+}
+
+
+.columns h4{
+   font-size: 25px;
+}
+
+
+
+
+.columns p{
+   font-size: 17px;
+}
+
+
+
+.columns2{
+    background-color: #13325d;
+    width: 25vw;
+    height: 30vh;
+    border-radius: 30px;
+
+
+}
+
+.columns3{
+    background-color: #13325d;
+   width: 25vw;
+    height: 30vh;
+    border-radius: 30px;
+
+}
+
+
+
+.columns4{
+    background-color: #13325d;
+    width: 25vw;
+    height: 30vh;
+    border-radius: 30px;
+}
+
+
+.footer{
+    display: flex;
+    justify-content: center;
+gap: 300px;  
+border-top: 3px solid #13325d;  
+}
+
+
+
+.footer h6{
+    font-size: 20px;
+}
