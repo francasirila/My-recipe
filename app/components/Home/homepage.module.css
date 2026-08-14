@@ -1,52 +1,99 @@
-.body h1{
- font-size: 60px;
- color: #2b0264;
-    
-
+.body h1 {
+    font-size: clamp(1.8rem, 6vw, 60px); 
+     color: #2b0264;
+    margin-bottom: 20px;
+    line-height: 1.2;
 }
 
-
-.passage{
- font-size: 3rem;
-      margin-left: 40px;
-      margin-top: 0;
-}
-
-.passage2{
-     font-size: 1.5rem;
-     margin-left: 10px;
-     color:#7A5468;
-}
-
-.image{
-  
-    padding: 30px;
-}
-
-.heading{
+.heading, .passage1 {
     color: #D6365E;
+    font-size: 2-px;
 }
 
-.passage1 {
-    color: #D6365E;
+.passage2 {
+    font-size: clamp(0.85rem, 2vw, 1.1rem); 
+    color: #7A5468;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    padding: 0 15px; 
 }
 
-.entirebody{
+.image {
+    max-width: 100%;
+    width: clamp(250px, 60vw, 450px); 
+    height: auto;
+    margin: 0 auto; 
+    display: block;
+}
+
+.butt {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 200px;
-    margin-left: 200px;
-    margin-top: 8rem;
+    flex-wrap: wrap; 
+    gap: 15px;
+    margin: 20px auto 0 auto; 
+    width: 100%;
+    padding: 20px;
+}
+
+.butt a, .butt button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px; 
+    padding: 10px 20px; 
+    border-radius: 50px; 
+    white-space: nowrap; 
+    box-sizing: border-box;
+}
+
+
+.entirebody {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+    gap: 4vw; 
+    padding: 20px;
+    margin: 4rem auto 0 auto; 
+    max-width: 1200px; 
+}
+
+.entirebody > div {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .entirebody {
+        flex-direction: column-reverse; 
+        text-align: center; 
+        margin-top: 1.5rem;
+        gap: 2rem;
+    }
 }
 
 
 
-.butt{
+.intro {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.intro h2{
+    color: #4A2438;
+    font-size: 40px;
+
+}
+
+
+.samples{
     display: flex;
-    gap: 30px;
-    margin-left: 35rem;
-    
-    height: 5vh;
-    font-size: 13px;
+    justify-content: center;
+    gap: 50px;
+
 }
