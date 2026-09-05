@@ -1,99 +1,450 @@
-.body h1 {
-    font-size: clamp(1.8rem, 6vw, 60px); 
-     color: #2b0264;
-    margin-bottom: 20px;
-    line-height: 1.2;
+
+
+.main {
+  width: 100%;
+  overflow-x: hidden;
 }
 
-.heading, .passage1 {
-    color: #D6365E;
-    font-size: 2-px;
-}
-
-.passage2 {
-    font-size: clamp(0.85rem, 2vw, 1.1rem); 
-    color: #7A5468;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    padding: 0 15px; 
-}
-
-.image {
-    max-width: 100%;
-    width: clamp(250px, 60vw, 450px); 
-    height: auto;
-    margin: 0 auto; 
-    display: block;
-}
-
-.butt {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; 
-    gap: 15px;
-    margin: 20px auto 0 auto; 
-    width: 100%;
-    padding: 20px;
-}
-
-.butt a, .butt button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    text-decoration: none;
-    font-size: 14px; 
-    padding: 10px 20px; 
-    border-radius: 50px; 
-    white-space: nowrap; 
-    box-sizing: border-box;
-}
 
 
 .entirebody {
-    display: flex;
-    flex-direction: row; 
-    justify-content: center;
-    align-items: center;
-    gap: 4vw; 
-    padding: 20px;
-    margin: 4rem auto 0 auto; 
-    max-width: 1200px; 
+  width: min(1200px, 90%);
+  margin: 4rem auto 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: clamp(2rem, 6vw, 5rem);
 }
 
-.entirebody > div {
-    flex: 1; 
-    display: flex;
-    flex-direction: column;
+
+.body {
+  flex: 1;
+  max-width: 550px;
 }
 
-@media (max-width: 768px) {
-    .entirebody {
-        flex-direction: column-reverse; 
-        text-align: center; 
-        margin-top: 1.5rem;
-        gap: 2rem;
-    }
+
+.body h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  color: #2b0264;
+
+  margin: 20px 0;
+
+  line-height: 1.1;
 }
 
+
+.heading {
+  color: #d6365e;
+}
+
+
+.passage1 {
+  color: #d6365e;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+
+  margin-bottom: 1rem;
+}
+
+
+.passage2 {
+  color: #7a5468;
+
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+
+  line-height: 1.7;
+
+  margin-bottom: 30px;
+
+  max-width: 500px;
+}
+
+
+
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.image img {
+  width:  550px;
+  height: 550px;
+  display: block;
+}
+
+
+
+
+.butt {
+   align-items: center;
+
+  margin: 2rem auto 0;
+  margin-left: 500px;
+
+  width: 100%;
+}
+
+
+.butt button {
+  background-color: #d6365e;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 50px;
+
+  padding: 12px 24px;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+
+.butt button:hover {
+  transform: translateY(-2px);
+}
+
+
+
+
+.explore {
+  width: min(1100px, 90%);
+
+  margin: 3rem auto 0;
+
+  text-align: center;
+}
 
 
 .intro {
+  margin-bottom: 3rem;
+}
+
+
+.cravingText {
+  color: #d6365e;
+
+  margin-bottom: 10px;
+}
+
+
+.intro h2 {
+  color: #4a2438;
+
+  font-size: clamp(2rem, 4vw, 2.8rem);
+
+  margin: 0 0 15px;
+}
+
+
+.introDescription {
+  color: #4a2438;
+
+  font-size: 1rem;
+}
+
+
+
+.samples {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 35px;
+
+  width: 100%;
+}
+
+
+.sampleCard {
+  padding: 25px;
+
+  border-radius: 20px;
+
+  text-align: left;
+
+  min-height: 130px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.sampleCard:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+.sampleCard h4 {
+  margin: 0 0 15px;
+
+  font-size: 1.1rem;
+}
+
+
+.sampleCard p {
+  margin: 0;
+
+  line-height: 1.5;
+}
+
+
+
+.healthy {
+  background-color: #a8c4a2;
+}
+
+
+.snacks {
+  background-color: #ffd97d;
+}
+
+
+.drinks {
+  background-color: #d9c7f5;
+}
+
+
+
+.recipeSection {
+  width: min(1200px, 90%);
+
+  margin: 6rem auto;
+
+}
+
+
+.recipeIntro {
+  text-align: center;
+
+  margin-bottom: 3rem;
+}
+
+
+.recipeIntro p {
+  color: #d6365e;
+
+  margin-bottom: 10px;
+}
+
+
+.recipeIntro h2 {
+  color: #4a2438;
+
+  font-size: clamp(2rem, 4vw, 2.8rem);
+
+  margin: 0;
+}
+
+
+
+
+.recipeGrid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 25px;
+
+  width: 100%;
+}
+
+
+
+.recipeCard {
+  background-color: white;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.recipeCard:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+
+.recipeImage {
+  width: 100%;
+
+  height: 220px;
+
+  overflow: hidden;
+}
+
+
+.recipeImage img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+.recipeInfo {
+  padding: 20px;
+}
+
+
+.recipeInfo h3 {
+  color: #4a2438;
+
+  margin: 0 0 10px;
+
+  font-size: 1.2rem;
+}
+
+
+.recipeInfo p {
+  color: #7a5468;
+
+  margin: 0 0 15px;
+
+  line-height: 1.5;
+
+  font-size: 0.9rem;
+}
+
+
+.recipeInfo span {
+  color: #d6365e;
+
+  font-size: 0.85rem;
+
+  font-weight: 600;
+}
+
+
+
+@media (max-width: 900px) {
+
+  .entirebody {
+    gap: 2rem;
+  }
+
+
+  .recipeGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .samples {
+    gap: 20px;
+  }
+
+}
+
+
+
+@media (max-width: 700px) {
+
+  .entirebody {
+    width: 90%;
+
+    flex-direction: column-reverse;
+
     text-align: center;
-    margin-bottom: 50px;
+
+    margin-top: 2rem;
+
+    gap: 2rem;
+  }
+
+
+  .body {
+    max-width: 100%;
+  }
+
+
+  .passage2 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .image {
+    width: 100%;
+  }
+
+
+  .image img {
+    width: min(100%, 380px);
+  }
+
+
+  .samples {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+
+  .sampleCard {
+    text-align: center;
+  }
+
+
+  .recipeGrid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+
+  .recipeSection {
+    margin-top: 4rem;
+  }
+
 }
 
-.intro h2{
-    color: #4A2438;
-    font-size: 40px;
-
-}
 
 
-.samples{
-    display: flex;
-    justify-content: center;
-    gap: 50px;
+@media (max-width: 400px) {
+
+  .entirebody {
+    width: 92%;
+  }
+
+.butt {
+    margin-left: 40px;
+  }
+  .body h1 {
+    font-size: 2.3rem;
+  }
+
+
+  .passage2 {
+    font-size: 0.9rem;
+  }
+
+
+  .recipeSection {
+    width: 92%;
+  }
 
 }

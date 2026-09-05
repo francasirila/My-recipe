@@ -8,7 +8,7 @@ export default function Nav() {
 
   const menuItems = [
     { name: "Home", path: "/" },
-    { name: "find recipe", path: "/recipe" },
+    { name: "find recipe", path: "/Recipe/RecipeCard" },
     { name: "browse", path: "/browse" },
     { name: "favorites", path: "/favorites" },
   ];
@@ -24,12 +24,7 @@ export default function Nav() {
 
     }}>
       
-      <img 
-        src="/macs.png" 
-        alt="Logo" 
-        className="nav-logo" 
-        style={{ height: "40px",marginLeft: '10rem',marginTop: '40px'}} 
-      />
+     
 
       <div 
         className="nav-container"

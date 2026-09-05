@@ -1,7 +1,7 @@
-import Styles from "./RecipeCard.module.css";
+import styles from "./RecipeCard.module.css";
 import Image from "next/image";
 
-export default function RecipeCard() {
+export default function RecipeCards() {
   const cards = [
     {
       id: 1,
@@ -14,7 +14,8 @@ export default function RecipeCard() {
     {
       id: 2,
       name: "Homemade Pasta",
-      blurb: "Silky egg dough rolled thin for the ultimate fresh noodles.",
+      blurb:
+        "Silky egg dough rolled thin for the ultimate fresh noodles.",
       rating: 5,
       image: "/food2.jpg",
     },
@@ -37,7 +38,8 @@ export default function RecipeCard() {
     {
       id: 5,
       name: "Slow Cooked Chili",
-      blurb: "Hearty beef and beans simmered all day with smoky spices.",
+      blurb:
+        "Hearty beef and beans simmered all day with smoky spices.",
       rating: 4,
       image: "/chilli.jpg",
     },
@@ -52,7 +54,8 @@ export default function RecipeCard() {
     {
       id: 7,
       name: "Creamy Tonkotsu Ramen",
-      blurb: "Rich, velvety pork broth served with tender chashu and noodles.",
+      blurb:
+        "Rich, velvety pork broth served with tender chashu and noodles.",
       rating: 5,
       image: "/ramen2.jpg",
     },
@@ -81,34 +84,56 @@ export default function RecipeCard() {
       image: "/brownies.png",
     },
     {
-    id: 11,
-    name: "Gourmet Smash Burger",
-    blurb: "Double seared patties with melted cheddar, crisp pickles, and signature house sauce.",
-    rating: 5,
-    image: "/burger.jpg",
-  },
-  {
-    id: 12,
-    name: "Artisan Avocado Toast",
-    blurb: "Thick sourdough topped with smashed avocado, poached egg, and chili flakes.",
-    rating: 5,
-    image: "/avocado.jpg",
-  },
+      id: 11,
+      name: "Gourmet Smash Burger",
+      blurb:
+        "Double seared patties with melted cheddar, crisp pickles, and signature house sauce.",
+      rating: 5,
+      image: "/burger.jpg",
+    },
+    {
+      id: 12,
+      name: "Artisan Avocado Toast",
+      blurb:
+        "Thick sourdough topped with smashed avocado, poached egg, and chili flakes.",
+      rating: 5,
+      image: "/avocado.jpg",
+    },
   ];
 
   return (
-    <div className={Styles.recipecard}>
-      {cards.map((card, index) => (
-        <div key={card.id} className={Styles.singleCard}>
-          <div className={Styles.emoji}>{card.emoji}</div>
-          <div className={Styles.image}>
-            <Image src={card.image} alt={card.name} width={250} height={300} />
+    <div className={styles.recipecard}>
+
+      {cards.map((card) => (
+        <div
+          key={card.id}
+          className={styles.singleCard}
+        >
+
+          <div className={styles.image}>
+            <Image
+              src={card.image}
+              alt={card.name}
+              width={300}
+              height={220}
+            />
           </div>
-          <h3 className={Styles.cardName}>{card.name}</h3>
-          <p className={Styles.cardBlurb}>{card.blurb}</p>
-          <div className={Styles.rating}>{"⭐".repeat(card.rating)}</div>
+
+          <h3 className={styles.cardName}>
+            {card.name}
+          </h3>
+
+          <p className={styles.cardBlurb}>
+            {card.blurb}
+          </p>
+
+          <div className={styles.rating}>
+            {"⭐".repeat(card.rating)}
+          </div>
+
         </div>
       ))}
+
     </div>
   );
 }

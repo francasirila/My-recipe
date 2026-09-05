@@ -2,82 +2,63 @@ import styles from "./footer.module.css";
 
 export default function Contact() {
   return (
-    <main>
-      <div className={styles.heading}>
-        <h1>Contact Us</h1>
-        <p>Thank you for dinning with us</p>
-      </div>
-
-      <div>
-        <div>
-          <div className={styles.form1}>
-            <div>
-              <form action="/submit" method="post">
-                <label for="name"> Name: </label>
-                <input
-                  type="text"
-                  id="name"
-                  placeholder="Enter your name"
-                ></input>
-              </form>
-            </div>
-            <div>
-              <form action="/submit" method="post">
-                <label for="contact">Contact: </label>
-                <input
-                  type="int"
-                  id="contact"
-                  placeholder="phone number"
-                ></input>
-              </form>
-            </div>
-          </div>
-
-          <div className={styles.form2}> 
-            <form action="/submit" method="post">
-              <label for="email"> Email: </label>
-              <input
-                type="text"
-                id="email"
-                placeholder="Enter your email"
-              ></input>
-            </form>
-            </div>
-
-            <div className={styles.form3}>
-                <div>
-              <form>
-                <label for="message">Message: </label>
-                <input
-                  type="text"
-                  id="message"
-                  placeholder="type your message"
-                ></input>
-              </form>
-              <button type="submit">Send</button>
-              </div>
-          
-
-          <div className={styles.subscribe}>
-            <h3>New channel</h3>
-            <p>
-              Don't get left out when new recipes are out!
-              <br />
-              Subsribe to our news channel to get latest notifications{" "}
-            </p>
-
-            <form action="/submit" method="post">
-              <label for="email"> email: </label>
-              <input type="text" id="letter" placeholder="email"></input>
-
-            </form>
-                          <button type="submit">Subscribe</button>
-
-          </div>
-            </div>
+    <main className={styles.main}>
+        <div className={styles.heading}>
+          <img src="/footer.png" alt="footer" width="25%" />
         </div>
-      </div>
+      <div className={styles.footer}>
+      
 
+        <div className={styles.form}>
+          <form action="/submit" method="post">
+            <label for="name"> Name: </label>
+            <input type="text" id="name" placeholder="Enter your name"></input>
+          </form>
+
+          <form action="/submit" method="post">
+            <label for="contact">Contact: </label>
+            <input
+              style={{
+                alignItems: "center",
+                width: "100%",
+                height: "100%",
+                border: "1px solid #ccc",
+                borderRadius: "4px",
+                lineHeight: "2.5",
+                padding: "10px",
+                boxSizing: "border-box",
+              }}
+              type="number"
+              id="contact"
+              placeholder="phone number"
+            ></input>
+          </form>
+
+          <form action="/submit" method="post">
+            <label for="email"> Email: </label>
+            <input
+              type="text"
+              id="email"
+              placeholder="Enter your email"
+            ></input>
+          </form>
+
+          <form>
+            <label for="message">Message: </label>
+            <input
+              type="text"
+              id="message"
+              placeholder="type your message"
+            ></input>
+          </form>
+          <button className={styles.button} type="submit">
+            Send
+          </button>
+        </div>
+
+
+      
+<div className={styles.socials}>
       <div className={styles.columns}>
         <div className={styles.columns2}>
           <h4>(+254) 7456797467</h4>
@@ -95,7 +76,7 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className={styles.footer}>
+      <div className={styles.navigation}>
         <div>
           <h6>Dishes</h6>
           <p>The art of making food</p>
@@ -117,6 +98,8 @@ export default function Contact() {
           <h6> (+254) 75637268</h6>
           <h6>franca@gmail.com</h6>
         </div>
+      </div>
+      </div>
       </div>
     </main>
   );

@@ -1,4 +1,3 @@
-import { Cardo } from "next/font/google";
 import styles from "./homepage.module.css";
 import Image from "next/image";
 
@@ -6,92 +5,158 @@ export default function Homepage() {
   const cards = [
     {
       id: 1,
-      image: "/brownies.png",
+      image: "/strawberry.jpg",
       name: "Veggie bowl",
-      description: "a bowful of good vibes",
-      time : "date"
-
-  },
+      description: "a bowlful of good vibes",
+      time: "20 min",
+    },
     {
-      id: 1,
+      id: 2,
+      image: "/croissants.jpg",
+      name: "Berry bites",
+      description: "a little sweetness for your day",
+      time: "15 min",
+      path: "/browse",
+    },
+    {
+      id: 3,
+      image: "/lemoncake.jpg",
+      name: "Dreamy bowl",
+      description: "fresh, colorful and feel-good",
+      time: "25 min",
+    },
+    {
+      id: 4,
       image: "/brownies.png",
-      name: "Veggie bowl",
-      description: "a bowful of good vibes",
-      time : "date",
-      path : "/browse"
+      name: "Sweet treat",
+      description: "something lovely for later",
+      time: "10 min",
+    },
+  ];
 
-  },  {
-      id: 1,
-      image: "/brownies.png",
-      name: "Veggie bowl",
-      description: "a bowful of good vibes",
-      time : "date"
-
-  },  {
-      id: 1,
-      image: "/brownies.png",
-      name: "Veggie bowl",
-      description: "a bowful of good vibes",
-      time : "date"
-
-  },
-]
   return (
-    
-    <main>
-      <div className={styles.entirebody}>
+    <main className={styles.main}>
+
+      {/* HERO SECTION */}
+      <section className={styles.entirebody}>
+
         <div className={styles.body}>
-          <p className={styles.passage1}>your kitchen but make it pretty</p>
-          <h1>Cook something <br/> <span className={styles.heading}>sweet</span> today</h1>
-          <p className={styles.passage2}>
-           Blush & basil is your cozy corner for healthy bowls,<br/> 
-           cute little snacks and dreamy drinks-search by whats<br/> 
-             already in your fridge and save your favorites for later
+          <p className={styles.passage1}>
+            your kitchen but make it pretty
           </p>
-          </div>
+
+          <h1>
+            Cook something{" "}
+            <span className={styles.heading}>sweet</span> today
+          </h1>
+
+          <p className={styles.passage2}>
+            Blush & Basil is your cozy corner for healthy bowls,
+            cute little snacks and dreamy drinks — search by what's
+            already in your fridge and save your favorites for later.
+          </p>
+        </div>
 
         <div className={styles.image}>
-          <Image src="/macs.png" alt="food" width={450}   height={450} />
+          <Image
+            src="/vanilla.png"
+            alt="Vanilla cake with blueberries and lemon"
+            width={700}
+            height={300}
+            priority
+          />
         </div>
-    </div>
-    <div className={styles.butt}>
-              <button style={{ borderRadius: "23px",width: "8vw", backgroundColor: "#D6365E", color: "white", border: "none"}}>find a recipe for me</button>
-              <button style={{ borderRadius: "23px",width: "8vw", color: "#D6365E",backgroundColor: "#ffffff", border: "1px solid #D6365E"}}>browse collection</button>
-</div>
-<div className={styles.explore}>
-  <div className={styles.intro}>
-    <p style={{color: "#D6365E"}}>pick your craving</p>
-    <h2>three little worlds to explore</h2>
-    <p style={{color: "#4A2438"}}>whichever mood you are in, we've got a plate for it</p>
-  </div>
 
-  <div className={styles.samples}>  
-    <div style={{backgroundColor: "#A8C4A2", borderRadius: "20px", padding: "20px"}} >
-      <h4>Healthy</h4>
-      <p>leafy, colorful, feel good plates</p>
-    </div>
-    <div style={{backgroundColor: "#FFD97D", borderRadius: "20px",padding: "20px"}}>
-       <h4>Snacks</h4>
-      <p>cute little bites for any craving</p>
-    </div>
-    <div style={{backgroundColor: "#D9C7F5", borderRadius: "20px", padding: "20px"}}>
-       <h4>Drinks</h4>
-      <p>Sippable, dreamy, a little floral</p>
-    </div>
-  </div>
-</div>
-<div>
-  {cards.map((card) =>{
-    <card
-    key={card.id}
-    image={card.image}
-    name={card.name}
-    description={card.description}
-    />
-  }
-)
-  }
-</div>
+      </section>
+
+
+      {/* CTA BUTTON */}
+      <div className={styles.butt}>
+        <button>
+          find a recipe for me
+        </button>
+      </div>
+
+
+      {/* EXPLORE SECTION */}
+      <section className={styles.explore}>
+
+        <div className={styles.intro}>
+          <p className={styles.cravingText}>
+            pick your craving
+          </p>
+
+          <h2>
+            three little worlds to explore
+          </h2>
+
+          <p className={styles.introDescription}>
+            whichever mood you are in, we've got a plate for it
+          </p>
+        </div>
+
+
+        <div className={styles.samples}>
+
+          <div className={`${styles.sampleCard} ${styles.healthy}`}>
+            <h4>Healthy</h4>
+            <p>leafy, colorful, feel-good plates</p>
+          </div>
+
+          <div className={`${styles.sampleCard} ${styles.snacks}`}>
+            <h4>Snacks</h4>
+            <p>cute little bites for any craving</p>
+          </div>
+
+          <div className={`${styles.sampleCard} ${styles.drinks}`}>
+            <h4>Drinks</h4>
+            <p>sippable, dreamy, a little floral</p>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* RECIPE CARDS */}
+      <section className={styles.recipeSection}>
+
+        <div className={styles.recipeIntro}>
+          <p>something you might love</p>
+          <h2>little recipes for your day</h2>
+        </div>
+
+        <div className={styles.recipeGrid}>
+
+          {cards.map((card) => (
+            <div
+              className={styles.recipeCard}
+              key={card.id}
+            >
+
+              <div className={styles.recipeImage}>
+                <Image
+                  src={card.image}
+                  alt={card.name}
+                  width={700}
+                  height={220}
+                />
+              </div>
+
+              <div className={styles.recipeInfo}>
+                <h3>{card.name}</h3>
+
+                <p>{card.description}</p>
+
+                <span>{card.time}</span>
+              </div>
+
+            </div>
+          ))}
+
+        </div>
+
+      </section>
 
     </main>
   );
