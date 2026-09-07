@@ -8,9 +8,9 @@ export default function Nav() {
 
   const menuItems = [
     { name: "Home", path: "/" },
-    { name: "find recipe", path: "/Recipe/RecipeCard" },
-    { name: "browse", path: "/browse" },
+    { name: "find recipe", path: "/recipe" },
     { name: "favorites", path: "/favorites" },
+    { name: "contacts", path: "/contacts" },
   ];
 
   return (

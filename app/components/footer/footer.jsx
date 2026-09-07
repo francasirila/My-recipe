@@ -9,52 +9,6 @@ export default function Contact() {
       <div className={styles.footer}>
       
 
-        <div className={styles.form}>
-          <form action="/submit" method="post">
-            <label for="name"> Name: </label>
-            <input type="text" id="name" placeholder="Enter your name"></input>
-          </form>
-
-          <form action="/submit" method="post">
-            <label for="contact">Contact: </label>
-            <input
-              style={{
-                alignItems: "center",
-                width: "100%",
-                height: "100%",
-                border: "1px solid #ccc",
-                borderRadius: "4px",
-                lineHeight: "2.5",
-                padding: "10px",
-                boxSizing: "border-box",
-              }}
-              type="number"
-              id="contact"
-              placeholder="phone number"
-            ></input>
-          </form>
-
-          <form action="/submit" method="post">
-            <label for="email"> Email: </label>
-            <input
-              type="text"
-              id="email"
-              placeholder="Enter your email"
-            ></input>
-          </form>
-
-          <form>
-            <label for="message">Message: </label>
-            <input
-              type="text"
-              id="message"
-              placeholder="type your message"
-            ></input>
-          </form>
-          <button className={styles.button} type="submit">
-            Send
-          </button>
-        </div>
 
 
       

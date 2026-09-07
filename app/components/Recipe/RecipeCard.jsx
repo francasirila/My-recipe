@@ -8,7 +8,7 @@ export default function RecipeCards() {
       name: "Classic Sourdough",
       blurb:
         "A crusty, artisanal loaf featuring a complex, tangy crumb structure.",
-      rating: 5,
+      time: "45 min",
       image: "/image1.jpg",
     },
     {
@@ -16,7 +16,7 @@ export default function RecipeCards() {
       name: "Homemade Pasta",
       blurb:
         "Silky egg dough rolled thin for the ultimate fresh noodles.",
-      rating: 5,
+      time: "30 min",
       image: "/food2.jpg",
     },
     {
@@ -24,7 +24,7 @@ export default function RecipeCards() {
       name: "Cast Iron Pizza",
       blurb:
         "Thick, crispy crust loaded with bubbling mozzarella and fresh basil.",
-      rating: 4,
+      time: "35 min",
       image: "/pizza.jpg",
     },
     {
@@ -32,7 +32,7 @@ export default function RecipeCards() {
       name: "French Macarons",
       blurb:
         "Delicate almond meringue shells sandwiched with rich chocolate ganache.",
-      rating: 5,
+      time: "50 min",
       image: "/macaroons.jpg",
     },
     {
@@ -40,7 +40,7 @@ export default function RecipeCards() {
       name: "Slow Cooked Chili",
       blurb:
         "Hearty beef and beans simmered all day with smoky spices.",
-      rating: 4,
+      time: "1 hr 30 min",
       image: "/chilli.jpg",
     },
     {
@@ -48,7 +48,7 @@ export default function RecipeCards() {
       name: "Berry Galette",
       blurb:
         "A rustic, free-form pastry tart bursting with seasonal summer berries.",
-      rating: 5,
+      time: "40 min",
       image: "/berry.jpg",
     },
     {
@@ -56,15 +56,15 @@ export default function RecipeCards() {
       name: "Creamy Tonkotsu Ramen",
       blurb:
         "Rich, velvety pork broth served with tender chashu and noodles.",
-      rating: 5,
-      image: "/ramen2.jpg",
+      time: "1 hr",
+      image: "/tofu.png",
     },
     {
       id: 8,
       name: "Fluffy Pancakes",
       blurb:
         "Buttermilk hotcakes stacked high and drenched in pure maple syrup.",
-      rating: 4,
+      time: "20 min",
       image: "/pancakes.jpg",
     },
     {
@@ -72,7 +72,7 @@ export default function RecipeCards() {
       name: "Thai Green Curry",
       blurb:
         "A vibrant, aromatic coconut curry packed with crisp garden vegetables.",
-      rating: 4,
+      time: "35 min",
       image: "/curry.jpg",
     },
     {
@@ -80,7 +80,7 @@ export default function RecipeCards() {
       name: "Decadent Fudge Brownies",
       blurb:
         "Intensely fudgy chocolate squares with a shiny, crinkly top crust.",
-      rating: 5,
+      time: "30 min",
       image: "/brownies.png",
     },
     {
@@ -88,7 +88,7 @@ export default function RecipeCards() {
       name: "Gourmet Smash Burger",
       blurb:
         "Double seared patties with melted cheddar, crisp pickles, and signature house sauce.",
-      rating: 5,
+      time: "25 min",
       image: "/burger.jpg",
     },
     {
@@ -96,20 +96,18 @@ export default function RecipeCards() {
       name: "Artisan Avocado Toast",
       blurb:
         "Thick sourdough topped with smashed avocado, poached egg, and chili flakes.",
-      rating: 5,
+      time: "15 min",
       image: "/avocado.jpg",
     },
   ];
 
   return (
     <div className={styles.recipecard}>
-
       {cards.map((card) => (
         <div
           key={card.id}
           className={styles.singleCard}
         >
-
           <div className={styles.image}>
             <Image
               src={card.image}
@@ -127,13 +125,11 @@ export default function RecipeCards() {
             {card.blurb}
           </p>
 
-          <div className={styles.rating}>
-            {"⭐".repeat(card.rating)}
-          </div>
-
+          <span className={styles.time}>
+            {card.time}
+          </span>
         </div>
       ))}
-
     </div>
   );
 }

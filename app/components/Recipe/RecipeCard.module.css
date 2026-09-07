@@ -5,6 +5,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
+  margin-top: 5rem;
 }
 
 .singleCard {
@@ -32,7 +33,11 @@
   height: 100%;
   object-fit: cover;
 }
+.time{
+    color: #d6365e;
+    margin: 0 20px 20px;
 
+}
 .cardName {
   color: #4a2438;
   font-size: 1.2rem;
@@ -56,7 +61,6 @@
 }
 
 
-/* TABLET */
 
 @media (max-width: 900px) {
   .recipecard {
@@ -64,8 +68,7 @@
   }
 }
 
-
-/* MOBILE */
+ 
 
 @media (max-width: 600px) {
   .recipecard {
